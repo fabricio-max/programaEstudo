@@ -12,7 +12,11 @@ import cursojava.constantes.StatusAluno;
 
 public class ExecutarApp {
 	public static void main(String[] args) {
-
+		String login = JOptionPane.showInputDialog("Informe o login: ");
+		String senha = JOptionPane.showInputDialog("Informe a senha: ");
+		
+		if(login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")){
+			
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		// é uma lista que contém chaves que identificam uma sequência de valores
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
@@ -79,6 +83,7 @@ public class ExecutarApp {
 					+ " com média de: " + aluno.getMedia());
 
 		}
-
+	}
+	
 	}
 }
